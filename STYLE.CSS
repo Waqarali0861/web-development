@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+}
+
+.nav {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    padding: 0 1rem;
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    min-height: 60px;
+    max-height: 80px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #3498db;
+    padding: 0.5rem;
+}
+
+.navlinks {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+   
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: #2c3e50;
+    transition: color 0.3s;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.navlinks a:hover {
+    color: #3498db;
+}
+
+.img {
+    max-width: 50px;
+    height: auto;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    margin-top:69px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.header p {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.section {
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #e74c3c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+body {
+    background-color: #ecf0f1;
+}
+
+.sub{
+    margin: 1.5rem -7.2px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-size: larger;
+}
+
+
+.suba{
+    margin: 1.5rem -7px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-size: larger;
+    background-color: #ffffff;
+}
+
+.sub h3 {
+    color:slateblue;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        grid-template-columns: auto 1fr;
+        padding: 0.5rem;
+      
+         
+    }
+    
+    .navlinks  {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navlinks a{
+        visibility: hidden;
+    }
+   
+    
+    .nav.active .navlinks {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+        justify-self: end;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navlinks a {
+        font-size: 0.9rem;
+    }
+    .navlinks a{
+        visibility: hidden;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-top: 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: var(--light);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+:root {
+    --primary: #2c3e50; 
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --code-bg: #1a1a1a;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+   
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+       
+    }
+}
+#highlight {
+    background-color: #dff9fb;
+    padding: 10px;
+    border-left: 5px solid #22a6b3;
+    margin:auto;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-size: largE;
+    /* position: relative; */
+    place-self: CENTER;
+    width: 50%;
+}
